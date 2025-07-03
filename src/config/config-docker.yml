@@ -13,7 +13,7 @@ postgres:
   host: postgres_container
   port: 5432
   user: postgres
-  password: admin
+  password: 12345678
   dbName: booking_db
   sslMode: disable
   maxIdleConns: 15
@@ -22,7 +22,7 @@ postgres:
 redis:
   host: redis_container
   port: 6379
-  password: password
+  password: mypassword123
   db: 0
   dialTimeout: 5
   readTimeout: 5

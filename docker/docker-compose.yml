@@ -55,9 +55,9 @@ services:
       - PORT=9000
       - DB_HOST=postgres_container
       - DB_PORT=5432
-      - DB_USER=postgres
-      - DB_PASSWORD=admin
-      - DB_NAME=booking_db
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - DB_NAME=${POSTGRES_DB}
       - REDIS_HOST=redis_container
       - REDIS_PORT=6379
     ports:
