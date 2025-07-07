@@ -70,6 +70,17 @@ services:
       - postgres
       - redis
     restart: unless-stopped
+
+  ######################### PYTHON #########################
+  python-service:
+    build: ../python-service/
+    image: python-service:latest
+    container_name: python-service
+    ports:
+      - "5001:5001"
+    networks:
+      - webapi_network
+    restart: unless-stopped
 ######################### VOLUME AND NETWORKS #########################
 volumes:
   postgres:

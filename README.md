@@ -26,6 +26,8 @@ cd go-web-api
 ### 2. Initialize and run with Docker
 ```sh
 docker compose -p go-booking-api -f "docker/docker-compose.yml" up -d postgres pgadmin redis
+
+docker compose -p go-booking-api -f "docker/docker-compose.yml" up -d --build python-service
 ```
 This will build and start the API server and Redis (as defined in `docker-compose.yml`).
 

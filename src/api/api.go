@@ -51,10 +51,12 @@ func RegisterRoutes(r *gin.Engine, cfg *config.Config) {
 		health := v1.Group("/health")
 		users := v1.Group("/users")
 		booking := v1.Group("/bookings", middleware.Authentication(cfg), middleware.Authorization([]string{"admin", "default"}))
+		python := v1.Group("/python")
 
 		router.Health(health)
 		router.User(users, cfg)
 		router.Booking(booking, cfg)
+		router.Python(python)
 
 		r.Static("/static", "./uploads")
 
